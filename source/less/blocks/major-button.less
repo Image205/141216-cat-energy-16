@@ -1,0 +1,41 @@
+.major-button {
+  display: block;
+
+  min-width: 280px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Oswald regular", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: @green;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: @green-hover;
+  }
+
+  &:active {
+    color: @green-active-text;
+  }
+}
+
+.major-button--gray {
+  background-color: #f2f2f2;
+  color: #000000;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: #c3c3c3;
+  }
+}

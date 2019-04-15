@@ -3,32 +3,35 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
-    <a href="#" class="page-header__logotype">
-      <img class="page-header__logo-image" src="https://placehold.it/33x38" width="33" height="38"
-        alt="Логотип Cat Energy">
-      <img class="logo-text" src="https://placehold.it/101x18;" width="101" height="18" alt="Логотип Cat Energy">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="page-header__wrapper">
+      <a href="#" class="page-header__logotype">
+        <img class="page-header__logo-image" src="img/content/logo-mobile.svg" width="200" height="38"
+          alt="Логотип Cat Energy">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
@@ -36,7 +39,7 @@
       <div class="promo__wrapper">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__subtitle">Занялся собой? Замись котом!</p>
-        <img class="promo__image" src="https://placehold.it/280x270" width="280" height="270"
+        <img class="promo__image" src="img/decor/index-can-mobile@1x.png" width="280" height="271"
           alt="Изображение функционального питания Cat Energy">
         <a class="promo__button major-button" href="catalog.html">Подобрать программу</a>
       </div>
@@ -135,37 +138,45 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <section class="page-footer__contacts contacts">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8
-          Санкт-Петербург</p>
-        <div class="contacts__map-block">
-          <iframe class="contacts__map-interactive" src="https://yandex.ru/map-widget/v1/-/CCBjJF91" width="320"
-            height="360" frameborder="1" allowfullscreen="true"></iframe>
-          <img class="contacts__map-image" src="placehold.it/320x360" width="320" height="360">
+    <section class="contacts">
+      <div class="page-footer__wrapper">
+        <div class="contacts__text-block">
+          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8
+            Санкт-Петербург</p>
         </div>
-      </section>
-      <img class="logo-text page-footer__logo-text" src="https://placehold.it/128x24" width="128" height="24">
-      <ul class="page-footer__social-block">
-        <li class="page-footer__social-button">
-          <a class="page-footer__social-link page-footer__social-link--vk">Вконтакте</a>
-        </li>
-        <li class="page-footer__social-button">
-          <a class="page-footer__social-link page-footer__social-link--inst">Instagram</a>
-        </li>
-        <li class="page-footer__social-button">
-          <a class="page-footer__social-link page-footer__social-link--fb">Facebook</a>
-        </li>
-      </ul>
-      <div class="page-footer__credits">
-        <a class="page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="page-footer__dev-logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__dev-logo-image" src="img/htmlacademy.svg" width="27" height="34"
-            alt="Логотип HTML Academy">
-        </a>
       </div>
+    </section>
+    <div class="contacts__map-block">
+      <iframe class="contacts__map-interactive" src="https://yandex.ru/map-widget/v1/-/CCBjJF91" width="320"
+        height="360" frameborder="1" allowfullscreen="true"></iframe>
+      <img class="contacts__map-image" src="img/content/bg-map-mobile@1x.png" width="320" height="360">
     </div>
+    <section class="page-footer__social">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo-text">
+          <img src="img/content/logo-footer.svg" width="128" height="24">
+        </a>
+        <ul class="page-footer__social-block">
+          <li class="page-footer__social-button">
+            <a class="page-footer__social-link page-footer__social-link--vk">Вконтакте</a>
+          </li>
+          <li class="page-footer__social-button">
+            <a class="page-footer__social-link page-footer__social-link--inst">Instagram</a>
+          </li>
+          <li class="page-footer__social-button">
+            <a class="page-footer__social-link page-footer__social-link--fb">Facebook</a>
+          </li>
+        </ul>
+        <div class="page-footer__credits">
+          <a class="page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="page-footer__dev-logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="page-footer__dev-logo-image" src="img/icon/htmlacademy.svg" width="27" height="34"
+              alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </div>
+    </section>
   </footer>
 </body>
 
