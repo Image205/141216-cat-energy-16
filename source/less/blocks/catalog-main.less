@@ -4,6 +4,9 @@
 }
 
 .catalog-main__list {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
   list-style: none;
@@ -32,4 +35,15 @@
   line-height: 16px;
   font-family: "Arial", sans-serif;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-main__wrapper {
+    width: 708px;
+  }
+
+  .catalog-main__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

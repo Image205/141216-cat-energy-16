@@ -1,7 +1,7 @@
 .major-button {
   display: block;
 
-  min-width: 280px;
+  min-width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -37,5 +37,13 @@
 
   &:active {
     color: #c3c3c3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .major-button {
+    min-width: 245px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
