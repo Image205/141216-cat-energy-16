@@ -82,13 +82,13 @@
 @media (min-width: @desktop-width) {
   .site-list__item {
     font-size: 20;
-
-    &--active::after {
-      background-color: #ffffff;
-    }
   }
 
-  .site-list__item a {
+  .site-list__item--white.site-list__item--active::after {
+    background-color: #ffffff;
+  }
+
+  .site-list__item--white a {
     color: #ffffff;
 
     &:hover,
