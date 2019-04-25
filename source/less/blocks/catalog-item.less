@@ -1,13 +1,28 @@
 .catalog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin-bottom: 24px;
   border-top: 1px solid #e4e4e4;
 }
 
-.catalog-item__photo img {
-  display: block;
+.catalog-item__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.catalog-item__photo {
+  width: 140px;
+
+  & img {
+    display: block;
+  }
 }
 
 .catalog-item__title {
+  width: 75px;
   margin: 24px 0 15px;
   padding: 0;
 
@@ -19,8 +34,14 @@
   text-transform: uppercase;
 }
 
-.catalog-item__info a {
-  text-decoration: none;
+.catalog-item__info {
+  display: flex;
+  width: 140px;
+  flex-direction: column;
+
+  & a {
+    text-decoration: none;
+  }
 }
 
 .catalog-item__stats {
@@ -30,4 +51,87 @@
   font-size: 12px;
   line-height: 16px;
   border-collapse: collapse;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-item {
+    border: 0;
+    width: 324px;
+    min-height: 430px;
+    margin-top: 140px;
+
+    background-color: @bg-gray;
+  }
+
+  .catalog-item__body {
+    position: relative;
+    width: 324px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catalog-item__photo {
+    position: absolute;
+    bottom: 75%;
+  }
+
+  .catalog-item__info {
+    width: 250px;
+    margin-bottom: 35px;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catalog-item__title {
+    width: 126px;
+    margin-top: 165px;
+
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .catalog-item__stats {
+    width: 250px;
+    padding: 0;
+    margin: 0;
+
+    font-size: 16px;
+
+    & tr {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  .catalog-item__param {
+    text-align: left;
+  }
+
+  .catalog-item__option {
+    text-align: right;
+  }
+
+  .catalog-item__button {
+    width: 250px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-item {
+    width: 245px;
+  }
+
+  .catalog-item__stats {
+    width: 170px;
+  }
+
+  .catalog-item__button {
+    width: 170px;
+  }
 }

@@ -1,37 +1,43 @@
 .promo {
+  display: flex;
   padding: 0;
   margin: 0;
   min-width: 320px;
 
-  background-image: url("../../img/background/index-background-mobile@1x.jpg");
+  background-image: url("../img/background/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: auto 305px;
   background-position: center 0;
 }
 
 .promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 280px;
   margin: 0 auto;
 }
 
 .promo__title {
+  max-width: 280px;
   margin: 0;
   padding: 0;
-  margin-left: 15px;
-  padding-top: 28px;
+  margin-top: 28px;
 
   font-style: normal;
   font-size: 36px;
   line-height: 36px;
   font-family: "Oswald regular", "Arial", sans-serif;
   text-transform: none;
+  text-align: center;
   color: #ffffff;
 }
 
 .promo__subtitle {
+  max-width: 210px;
   margin: 0;
-  margin-top: 17px;
   padding: 0;
+  margin-top: 17px;
 
   font-style: normal;
   font-size: 14px;
@@ -44,4 +50,89 @@
 
 .promo__image {
   margin-top: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background: none;
+  }
+
+  .promo__wrapper {
+    position: relative;
+    width: 708px;
+    align-items: flex-start;
+  }
+
+  .promo__title {
+    max-width: 427px;
+    margin-left: 90px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: left;
+  }
+
+  .promo__subtitle {
+    max-width: 295px;
+    margin-left: 90px;
+    margin-top: 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+  }
+
+  .promo__image {
+    width: 708px;
+  }
+
+  .promo__button {
+    position: absolute;
+    left: 90px;
+    top: 260px;
+    min-width: 245px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo::after {
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 696px;
+    top: 0;
+    right: 0;
+    content: "";
+    z-index: -1;
+
+    background-image: url("../img/background/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .promo__wrapper {
+    width: 1220px;
+    min-height: 630px;
+    flex-direction: row;
+  }
+
+  .promo__title {
+    margin-top: 100px;
+    margin-left: 80px;
+  }
+
+  .promo__subtitle {
+    margin-top: 70px;
+    margin-left: 80px;
+  }
+
+  .promo__image {
+    width: 552px;
+  }
+
+  .promo__button {
+    left: 80px;
+    top: 345px;
+  }
 }
