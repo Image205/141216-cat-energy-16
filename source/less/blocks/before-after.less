@@ -1,4 +1,8 @@
 .before-after {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
   background-color: @bg-gray;
 }
 
@@ -12,7 +16,6 @@
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 0;
-  padding-top: 30px;
 
   font-style: normal;
   font-size: 36px;
@@ -27,30 +30,191 @@
 }
 
 .before-after__stats {
+  display: flex;
   margin-top: 30px;
+  justify-content: space-between;
+}
+
+.before-after__mini-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .before-after__lose-weight-title,
 .before-after__time-spent-title {
+  width: 124px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+
   font-style: normal;
   font-size: 24px;
   line-height: 24px;
   font-family: "Oswald regular", "Arial", sans-serif;
   text-transform: uppercase;
+  text-align: center;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
 }
 
 .before-after__lose-weight-tip,
 .before-after__time-spent-tip {
+  position: absolute;
+  bottom: -13px;
   font-style: normal;
   font-size: 12px;
   line-height: 12px;
   text-transform: lowercase;
+  text-align: center;
+  background-color: @bg-gray;
+}
+
+.before-after__lose-weight-tip {
+  width: 54px;
+  padding: 0 17px 0;
+}
+
+.before-after__time-spent-tip {
+  width: 59px;
+  padding: 0 15px 0;
 }
 
 .before-after__money-spent {
+  margin: 35px;
+
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
   font-family: "Oswald regular", "Arial", sans-serif;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .before-after {
+    position: relative;
+    background-color: #ffffff;
+    z-index: -2;
+    margin-top: 0;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      z-index: -1;
+      width: 100%;
+      height: 462px;
+
+      background-color: @bg-gray;
+    }
+  }
+
+  .before-after__wrapper {
+    width: 708px;
+  }
+
+  .before-after__title {
+    margin-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .before-after__text {
+    width: 680px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .before-after__stats-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 60px;
+  }
+
+  .before-after__stats {
+    width: 366px;
+  }
+
+  .before-after__lose-weight-title,
+  .before-after__time-spent-title {
+    width: 160px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .before-after__lose-weight-tip,
+  .before-after__time-spent-tip {
+    bottom: -6px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .before-after__lose-weight-tip {
+    padding: 0;
+    width: 114px;
+  }
+
+  .before-after__time-spent-tip {
+    padding: 0;
+    width: 142px;
+  }
+
+  .before-after__money-spent {
+    margin-bottom: 0;
+    width: 180px;
+
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after__wrapper {
+    width: 1220px;
+  }
+
+  .before-after__desktop-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .before-after__desktop-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 570px;
+  }
+
+  .before-after__stats-block {
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+
+  .before-after__text {
+    margin-top: 70px;
+    width: 433px;
+  }
+
+  .before-after__money-spent {
+    width: 327px;
+    margin-left: 0;
+    margin-top: 60px;
+
+    text-align: left;
+
+    & span {
+      margin-left: 63px;
+      text-align: right;
+    }
+  }
 }

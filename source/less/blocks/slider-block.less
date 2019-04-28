@@ -1,0 +1,138 @@
+.slider-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-block__image-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider-block__image {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.slider-block__image--thin-cat {
+  display: none;
+}
+
+.slider-block__slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  margin-bottom: 40px;
+}
+
+.slider-block__slider-range {
+  position: relative;
+  width: 82px;
+  height: 12px;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  background-color: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+}
+
+.slider-block__slider-toggle {
+  position: absolute;
+  display: block;
+  top: calc(50% - 3px);
+  left: 5px;
+  width: 35px;
+  height: 6px;
+
+  background-color: @green;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.slider-block__slider-button {
+  width: 42px;
+
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald regular", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .slider-block__image {
+    width: 677px;
+    height: 499px;
+
+    margin-bottom: 20px;
+  }
+
+  .slider-block__slider-button {
+    padding-bottom: 5px;
+
+    font-size: 20px;
+
+    border-bottom: 1px dotted #bebebe;
+  }
+
+  .slider-block__slider-button--before {
+    width: 45px;
+  }
+
+  .slider-block__slider-button--after {
+    width: 50px;
+  }
+
+  .slider-block__slider-controls {
+    width: 567px;
+    margin-bottom: 65px;
+  }
+
+  .slider-block__slider-range {
+    width: 428px;
+    height: 6px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .slider-block__slider-toggle {
+    width: 8px;
+    height: 8px;
+    top: calc(50% - 16px);
+    left: calc(0% - 16px);
+
+    border: 12px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px #dcdcdc;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider-block {
+    position: relative;
+    width: 650px;
+  }
+
+  .slider-block__image {
+    position: absolute;
+    width: 677px;
+    height: 499px;
+    left: 0;
+    top: -140px;
+  }
+
+  .slider-block__slider-controls {
+    margin-top: 365px;
+  }
+}
