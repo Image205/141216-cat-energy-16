@@ -1,9 +1,13 @@
 .contacts {
-  width: 320px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
   background-color: #ffffff;
+
+  &--gray-bg {
+    background-color: @bg-gray;
+  }
 }
 
 .contacts__text-block {
@@ -53,7 +57,7 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    width: @tablet-width;
+    width: 100%;
   }
 
   .contacts__text-block {
@@ -97,6 +101,10 @@
 @media (min-width: @desktop-width) {
   .contacts {
     height: 0;
+
+    &--gray-bg {
+      background-color: #ffffff;
+    }
   }
 
   .contacts__text-block {

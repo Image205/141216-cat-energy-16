@@ -1,8 +1,17 @@
 .additional-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-bottom: 1px solid #cdcdcd;
 }
 
+.additional-item__block {
+  display: flex;
+  flex-direction: column;
+}
+
 .additional-item__title {
+  width: 280px;
   margin: 0;
   padding: 15px 0;
 
@@ -20,6 +29,9 @@
 }
 
 .additional-item__info-block {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
   margin-bottom: 15px;
 
   font-style: normal;
@@ -29,4 +41,41 @@
 
 .additional-item__button {
   margin-bottom: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-item__block {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 633px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .additional-item__title {
+    width: 280px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-item__info-block {
+    width: 235px;
+    justify-content: flex-end;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: right;
+  }
+
+  .additional-item__price {
+    margin-left: 55px;
+  }
+
+  .additional-item__button {
+    width: 633px;
+    margin-bottom: 25px;
+  }
 }
