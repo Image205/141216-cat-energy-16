@@ -79,3 +79,47 @@
     margin-bottom: 25px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .additional-item {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 895px;
+
+    &--first-item {
+      border-top: 1px solid #cdcdcd;
+    }
+  }
+
+  .additional-item__block {
+    width: 615px;
+  }
+
+  .additional-item__title {
+    width: 245px;
+
+    text-align: left;
+  }
+
+  .additional-item__info-block {
+    width: 290px;
+    justify-content: flex-start;
+  }
+
+  .additional-item__unit {
+    width: 245px;
+    text-align: left;
+  }
+
+  .additional-item__price {
+    margin-left: 0;
+    width: 45px;
+  }
+
+  .additional-item__button {
+    align-self: center;
+    width: 245px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
