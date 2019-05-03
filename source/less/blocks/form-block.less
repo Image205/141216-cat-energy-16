@@ -215,24 +215,31 @@
 @media (min-width: @desktop-width) {
   .form-block {
     width: 1220px;
+    display: flex;
+    flex-direction: row;
   }
 
-  .form-block--first {
-    width: 1220px;
+  .form-block--container-first {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .form-block--first {
     padding: 0;
     margin: 0;
   }
 
   .form-block__list--main,
   .form-block__list--radio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
     width: 570px;
     margin: 0;
     padding: 0;
 
-    outline: 1px solid red;
+    box-sizing: border-box;
   }
 
   .form-block__item {
